@@ -1,0 +1,24 @@
+.form__area {
+  input {
+    // width: 100%;
+    // padding: 11px 16px;
+    // margin: 0 0 15px;
+
+    font-family: $roboto;
+    font-size: 14px;
+    line-height: 100%;
+    color: $color-default-white;
+
+    background-color: transparent;
+
+    @include hover-focus {
+      opacity: 0.8;
+      // outline-color: ;
+    }
+  }
+
+  input::placeholder {
+    font-family: inherit;
+    color: $light-state-grey;
+  }
+}

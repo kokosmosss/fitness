@@ -1,0 +1,61 @@
+.promo {
+  background-color: $torch-red;
+}
+
+.promo__content {
+  color: $color-default-white;
+
+  h2 {
+    font-family: $alumni;
+    font-weight: 600;
+    font-size: 82px;
+    line-height: 96%;
+    letter-spacing: 0.03em;
+
+    @include vp-1199 {
+      font-size: 48px;
+    }
+  }
+
+  p {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+  }
+
+  @include vp-1199 {
+    font-size: 12px;
+  }
+}
+
+.promo__dates {
+  dt {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+
+    @include vp-1199 {
+      font-size: 12px;
+    }
+  }
+
+  dd {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 150%;
+
+    @include vp-1199 {
+      font-size: 24px;
+    }
+  }
+
+  small {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+
+    @include vp-1199 {
+      font-size: 10px;
+    }
+  }
+}

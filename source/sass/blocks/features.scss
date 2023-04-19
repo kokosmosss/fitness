@@ -1,0 +1,86 @@
+.features {
+  h2 {
+    font-family: $alumni;
+    font-weight: 600;
+    font-size: 54px;
+    letter-spacing: 0.03em;
+
+    @include vp-1199 {
+      font-size: 42px;
+    }
+
+    @include vp-767 {
+      font-size: 32px;
+    }
+  }
+}
+
+.features__value {
+  span {
+    font-weight: 700;
+    font-size: 71px;
+    line-height: 150%;
+    color: transparent;
+
+    background-color: linear-gradient(142.51deg, $crimson 0%, $flying-fish 87.33%);
+    background-clip: text;
+
+    @include vp-1199 {
+      font-size: 58px;
+    }
+  }
+
+  small {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    color: $persian-blue;
+  }
+}
+
+.features__description {
+  h3 {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 150%;
+
+    @include vp-1199 {
+      font-size: 20px;
+    }
+  }
+
+  p {
+    line-height: 140%;
+  }
+}
+
+.features__item--big {
+  background-color: $resolution-blue;
+  color: $color-default-white;
+}
+
+.features__value--big {
+  span {
+    font-weight: 700;
+    font-size: 74px;
+    line-height: 150%;
+  }
+
+  p {
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 150%;
+
+    @include vp-1199 {
+      font-size: 22px;
+    }
+  }
+}
+
+.features__description--big {
+  p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+  }
+}

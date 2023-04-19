@@ -1,0 +1,32 @@
+.main-promo {
+  color: $color-default-white;
+  background-color: $torch-red;
+
+  h3 {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 156%;
+  }
+
+  span {
+    font-weight: 700;
+    font-size: 70px;
+    line-height: 156%;
+  }
+
+  p {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 140%;
+  }
+}
+
+.main-promo__btn {
+  font-family: $roboto;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-decoration: underline;
+}
