@@ -1,12 +1,31 @@
 .gym__content {
+  max-width: 418px;
+  padding: 38px 0 20px 59px;
+
+  @include vp-1199 {
+    max-width: 100%;
+    padding: 0 64px;
+    text-align: center;
+  }
+
+  @include vp-767 {
+    text-align: start;
+    padding: 0 15px;
+  }
+
   h2 {
+    margin: 0 0 9px;
+
     font-family: 'Alumni Sans';
     font-weight: 600;
     font-size: 48px;
+    line-height: 58px;
     letter-spacing: 0.03em;
 
     @include vp-1199 {
+      margin: 0;
       font-size: 42px;
+      line-height: 50px;
     }
 
     @include vp-767 {
@@ -15,12 +34,67 @@
   }
 
   h3 {
+    margin: 0 0 38px;
+
     font-weight: 400;
     font-size: 18px;
     line-height: 150%;
+
+    @include vp-1199 {
+      margin: 0 0 34px;
+    }
+
+    @include vp-767 {
+      margin: 0 0 22px;
+    }
   }
 
   p {
+    margin: 0 0 5px;
     line-height: 150%;
+
+    &:last-of-type {
+      @include vp-1199 {
+        display: none;
+      }
+    }
+  }
+}
+
+.gym__container {
+  position: relative;
+  display: flex;
+  gap: 80px;
+  margin: 0 auto;
+  padding: 0 103px;
+
+  @include vp-1199 {
+    flex-direction: column;
+    gap: 38px;
+    padding: 0 45px;
+  }
+
+  @include vp-767 {
+    padding: 0;
+    gap: 30px;
+  }
+
+  img {
+    @include vp-1199 {
+      width: 100%;
+    }
+  }
+}
+
+.gym__video {
+  position: absolute;
+  top: 72%;
+  left: 39.4%;
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+
   }
 }
