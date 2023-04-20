@@ -6,8 +6,8 @@ const playVideo = () => {
   if (videoBlock && iframe) {
     iframe.style.visibility = 'visible';
     button.style.display = 'none';
-    // iframe.src += 'autoplay=1';
-    // iframe.setAttribute('allow', 'autoplay');
+    iframe.src += 'autoplay=1';
+    iframe.setAttribute('allow', 'autoplay');
   }
 };
 

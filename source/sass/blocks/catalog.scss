@@ -1,11 +1,28 @@
 .catalog {
+  position: relative;
+  background-color: $ghost-white;
+  padding: 120px 0;
+  z-index: 0;
+
+  @include vp-1199 {
+    padding: 42px 0 100px;
+  }
+
+  @include vp-767 {
+    padding: 48px 0 70px;
+  }
+
   h2 {
+    margin: 0 0 17px;
     font-family: $alumni;
     font-weight: 600;
     font-size: 54px;
+    line-height: 65px;
     letter-spacing: 0.03em;
+    text-align: center;
 
     @include vp-1199 {
+      margin: 0 0 11px;
       font-size: 42px;
     }
 
@@ -15,32 +32,250 @@
   }
 }
 
+.catalog__image {
+  position: absolute;
+  right: 0;
+  bottom: -150px;
+  z-index: 1;
+
+  @include vp-1199 {
+    bottom: -131px;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+
+  @include vp-767 {
+    display: none;
+  }
+
+}
+
 .catalog__item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 448px;
+  padding: 63px 45px;
+  text-align: center;
+  background-color: $color-default-white;
+  z-index: 2;
+
+  @include vp-767 {
+    padding: 51px 35px;
+    min-height: 384px;
+  }
+
+  &:hover {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      border: 7px solid $smalt;
+      border-image: linear-gradient(to left top, $smalt, $crimson);
+      border-image-slice: 1;
+      pointer-events: none;
+    }
+
+  }
+
   h3 {
+    margin: 0 0 3px;
+
     font-weight: 700;
     font-size: 26px;
-    line-height: 94%;
+    line-height: 40px;
 
     @include vp-767 {
+      margin: 0 0 9px;
+
       font-size: 22px;
-      line-height: 110%;
+      line-height: 24px;
     }
   }
 
   p {
+    margin: 0 0 52px;
+
     color: $chambray;
     font-weight: 400;
-    line-height: 150%;
+    line-height: 24px;
+
+    @include vp-767 {
+      margin: 0 0 48px;
+    }
   }
 
   span {
+    position: relative;
+    margin: 0 0 34px;
+
     color: $egyptian-blue;
     font-weight: 700;
     font-size: 60px;
-    line-height: 150%;
+    line-height: 90px;
 
     @include vp-767 {
+      margin: 5px 0 26px;
+
       font-size: 48px;
+      line-height: 72px;
+
+      svg {
+        width: 24px;
+        height: 37px;
+      }
+    }
+
+    &::after {
+      position: absolute;
+      top: -60%;
+      left: 14%;
+      content: attr(data-shadow);
+      font-size: 100px;
+      line-height: 150px;
+      color: rgba($whisper, 0.48);
+      z-index: -1;
+
+      @include vp-767 {
+        font-size: 80px;
+        line-height: 120px;
+      }
     }
   }
 }
+
+.catalog__tabs {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  gap: 46px;
+  max-width: 343px;
+  margin: 0 auto 52px;
+
+  @include vp-1199 {
+    max-width: 315px;
+    margin: 0 auto 58px;
+  }
+
+  @include vp-767 {
+    margin: 0 auto 48px;
+  }
+
+  &::after {
+    position: absolute;
+    left: 0;
+    bottom: -15px;
+    content: "";
+    height: 2px;
+    width: 100%;
+    background-color: rgba($grey, 0.2);
+  }
+}
+
+.catalog__tab {
+  font-size: 20px;
+  line-height: 30px;
+  color: rgba($sapphire, 0.5);
+
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+
+  @include vp-1199 {
+    font-size: 18px;
+    line-height: 27px;
+  }
+
+  @include vp-767 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  &:focus,
+  &:hover {
+    outline: none;
+    color: rgba($sapphire, 0.7);
+  }
+
+  &:active {
+    color: $crimson;
+  }
+
+  &--active {
+    color: $sapphire;
+    position: relative;
+
+    &:focus,
+    &:hover {
+      color: $sapphire;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 0;
+      bottom: -15px;
+      width: 100%;
+      height: 2px;
+      background-color: $crimson;
+
+      @include vp-1199 {
+        bottom: -14px;
+      }
+
+      @include vp-767 {
+        width: calc(100% + 7px);
+      }
+    }
+  }
+}
+
+.catalog__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+
+  width: 100%;
+
+  @include vp-1199 {
+    grid-template-columns: 1fr;
+  }
+
+  @include vp-767 {
+    gap: 35px;
+  }
+}
+
+.catalog__btn {
+  color: $sapphire;
+  max-width: 206px;
+  padding: 28px 39px;
+  margin: 0 auto;
+  border: 2px solid $sapphire;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    border: none;
+    color: $color-default-white;
+    background-image: linear-gradient(97.05deg, $torch-red 17.6%, $cobalt 95.31%);
+  }
+}
+
+  .catalog__container {
+    @include vp-1199 {
+      padding: 0 118px;
+    }
+
+    @include vp-767 {
+      padding: 0;
+    }
+  }
