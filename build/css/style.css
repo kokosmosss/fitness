@@ -1181,44 +1181,119 @@ button,
   margin-bottom: 235px;
 }
 
-.promo {
-  background-color: #ed0233;
+.main__catalog {
+  margin-bottom: 120px;
+}
+
+.main__promo {
+  margin-bottom: 106px;
+}
+
+.main__trainers {
+  margin-bottom: 140px;
 }
 
 .promo__content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  max-width: 500px;
+  padding: 85px 79px 87px 73px;
   color: #ffffff;
+  background-color: #ed0233;
 }
 
 .promo__content h2 {
+  -ms-flex-item-align: start;
+  -ms-grid-row-align: start;
+  align-self: start;
+  margin: 0;
+  padding: 0 0 0 18px;
   font-family: "Alumni Sans", "Verdana", sans-serif;
   font-weight: 600;
   font-size: 82px;
-  line-height: 96%;
+  line-height: 79px;
   letter-spacing: 0.03em;
+  text-transform: uppercase;
 }
 
 .promo__content p {
+  grid-column: 1/-1;
+  margin: 5px 0 29px;
   font-weight: 400;
   font-size: 18px;
-  line-height: 150%;
+  line-height: 27px;
+}
+
+.promo__dates {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  margin: 0;
+  -ms-grid-row-align: start;
+  -ms-grid-column-align: end;
+  place-self: start end;
 }
 
 .promo__dates dt {
   font-weight: 400;
   font-size: 18px;
-  line-height: 150%;
+  line-height: 27px;
 }
 
 .promo__dates dd {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0 0 3px;
   font-weight: 700;
   font-size: 40px;
-  line-height: 150%;
+  line-height: 60px;
+}
+
+.promo__dates dd::before {
+  position: absolute;
+  content: "";
+  top: 5px;
+  width: 100%;
+  height: 1px;
+  background-color: #ffffff;
 }
 
 .promo__dates small {
   font-weight: 400;
   font-size: 14px;
-  line-height: 150%;
+  line-height: 21px;
+  padding-left: 7px;
+}
+
+.promo__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.promo__btn {
+  grid-column: 1/-1;
+  border: 4px solid #ffffff;
+  padding: 11px 50px;
+}
+
+.promo__image {
+  background-color: #030a1a;
+}
+
+.promo__image img {
+  width: 100%;
+  min-height: 466px;
 }
 
 .promotions h2 {
@@ -1282,33 +1357,139 @@ button,
 }
 
 .trainers h2 {
+  margin: 0 0 48px;
   font-family: "Alumni Sans", "Verdana", sans-serif;
   font-weight: 600;
   font-size: 54px;
+  line-height: 65px;
   letter-spacing: 0.03em;
 }
 
+.trainers__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 40px;
+}
+
 .trainers__item {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  overflow: hidden;
+  max-width: 260px;
+  height: 294px;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
   color: #ffffff;
 }
 
+.trainers__item:hover .trainers__content-wrapper,
+.trainers__item:focus .trainers__content-wrapper,
+.trainers__item:focus-within .trainers__content-wrapper {
+  height: 100%;
+  background-color: rgba(16, 38, 84, 0.89);
+  padding: 52px 48px;
+}
+
+.trainers__item:hover .trainers__content-wrapper h3,
+.trainers__item:focus .trainers__content-wrapper h3,
+.trainers__item:focus-within .trainers__content-wrapper h3 {
+  margin: 0;
+}
+
+.trainers__item:hover .trainers__content,
+.trainers__item:focus .trainers__content,
+.trainers__item:focus-within .trainers__content {
+  display: block;
+}
+
 .trainers__item h3 {
+  margin: auto 0 0;
   font-weight: 700;
   font-size: 18px;
-  line-height: 150%;
+  line-height: 27px;
+}
+
+.trainers__content-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 294px;
+  padding: 25px;
+  background-color: transparent;
+}
+
+.trainers__content {
+  display: none;
+  overflow: scroll;
+  scrollbar-width: none;
+  /* stylelint-disable-next-line */
+}
+
+.trainers__content::-webkit-scrollbar {
+  display: none;
 }
 
 .trainers__content span {
+  margin: -4px 0 32px;
+  display: block;
   color: #b6bdcc;
   font-weight: 400;
   font-size: 16px;
-  line-height: 150%;
+  line-height: 24px;
+  text-align: center;
+}
+
+.trainers__descriptions {
+  padding: 0 0 0 20px;
 }
 
 .trainers__description {
+  position: relative;
+  margin: 0 0 13px;
   font-weight: 400;
   font-size: 14px;
-  line-height: 150%;
+  line-height: 21px;
+}
+
+.trainers__description::before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: -9.5%;
+  display: block;
+  width: 6px;
+  height: 6px;
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+
+.trainers__image {
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background-color: #102654;
+}
+
+.trainers__image img {
+  width: 100%;
+  height: 100%;
 }
 
 .btn {
@@ -1318,13 +1499,16 @@ button,
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  text-align: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   font-family: "Roboto Condensed", "Verdana", sans-serif;
   font-weight: 700;
   font-size: 12px;
   line-height: 14px;
   letter-spacing: 0.05em;
   text-transform: uppercase;
+  text-align: center;
   cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -1428,13 +1612,16 @@ button,
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  text-align: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   font-family: "Roboto Condensed", "Verdana", sans-serif;
   font-weight: 700;
   font-size: 12px;
   line-height: 14px;
   letter-spacing: 0.05em;
   text-transform: uppercase;
+  text-align: center;
   cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -1672,24 +1859,72 @@ button,
     margin: 12px 0 0 0;
   }
 
-  .promo__content h2 {
-    font-size: 48px;
+  .main__catalog {
+    margin-bottom: 100px;
+  }
+
+  .main__promo {
+    margin-bottom: 100px;
+  }
+
+  .main__trainers {
+    margin-bottom: 100px;
   }
 
   .promo__content {
+    max-width: none;
+    width: 43.1%;
+    padding: 51px 45px;
+  }
+
+  .promo__content h2 {
+    padding: 0 0 0 7px;
+    font-size: 48px;
+    line-height: 46px;
+  }
+
+  .promo__content p {
+    margin: -5px 0 29px;
     font-size: 12px;
+    line-height: 18px;
   }
 
   .promo__dates dt {
     font-size: 12px;
+    line-height: 18px;
   }
 
   .promo__dates dd {
     font-size: 24px;
+    line-height: 36px;
+    margin: 0;
+  }
+
+  .promo__dates dd::before {
+    top: 2px;
   }
 
   .promo__dates small {
     font-size: 10px;
+    line-height: 15px;
+    padding-left: 4px;
+  }
+
+  .promo__btn {
+    border-width: 2px;
+    padding: 11px 38px;
+    font-size: 10px;
+    line-height: 12px;
+    letter-spacing: 0.05em;
+  }
+
+  .promo__image {
+    width: 56%;
+  }
+
+  .promo__image img {
+    min-height: auto;
+    height: auto;
   }
 
   .promotions h2 {
@@ -1702,6 +1937,11 @@ button,
 
   .trainers h2 {
     font-size: 42px;
+    line-height: 50px;
+  }
+
+  .trainers__item {
+    max-width: 268px;
   }
 }
 
@@ -1818,8 +2058,9 @@ button,
   }
 
   .gym__video iframe {
-    width: 320px;
-    height: 167px;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1.91/1;
   }
 
   .gym__video-button {
@@ -1888,6 +2129,33 @@ button,
     margin-bottom: 80px;
   }
 
+  .main__catalog {
+    margin-bottom: 68px;
+  }
+
+  .main__promo {
+    margin-bottom: 68px;
+  }
+
+  .main__trainers {
+    margin-bottom: 70px;
+  }
+
+  .promo__content {
+    width: 100%;
+  }
+
+  .promo__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .promo__image {
+    width: 100%;
+  }
+
   .promotions h2 {
     font-size: 32px;
   }
@@ -1898,6 +2166,17 @@ button,
 
   .trainers h2 {
     font-size: 32px;
+    line-height: 38px;
+  }
+
+  .trainers__item {
+    max-width: 226px;
+    height: 274px;
+  }
+
+  .trainers__description::before {
+    top: 7px;
+    left: -10.5%;
   }
 }
 

@@ -1,41 +1,145 @@
 .trainers {
   h2 {
+    margin: 0 0 48px;
     font-family: $alumni;
     font-weight: 600;
     font-size: 54px;
+    line-height: 65px;
     letter-spacing: 0.03em;
 
     @include vp-1199 {
       font-size: 42px;
+      line-height: 50px;
     }
 
     @include vp-767 {
       font-size: 32px;
+      line-height: 38px;
     }
   }
 }
 
+.trainers__list {
+  display: flex;
+  gap: 40px;
+}
+
 .trainers__item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  max-width: 260px;
+  height: 294px;
+  flex-grow: 1;
+
+  @include vp-1199 {
+    max-width: 268px;
+  }
+
+  @include vp-767 {
+    max-width: 226px;
+    height: 274px;
+  }
+
   color: $color-default-white;
 
+  &:hover,
+  &:focus,
+  &:focus-within {
+
+    .trainers__content-wrapper {
+      height: 100%;
+      background-color: rgba($sapphire, 0.89);
+      padding: 52px 48px;
+
+      h3 {
+        margin: 0;
+      }
+    }
+
+    .trainers__content {
+      display: block;
+    }
+  }
+
   h3 {
+    margin: auto 0 0;
     font-weight: 700;
     font-size: 18px;
-    line-height: 150%;
+    line-height: 27px;
   }
+}
+
+.trainers__content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 294px;
+  padding: 25px;
+  background-color: transparent;
 }
 
 .trainers__content {
+  display: none;
+  overflow: scroll;
+  scrollbar-width: none;
+
+  /* stylelint-disable-next-line */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
   span {
+    margin: -4px 0 32px;
+    display: block;
     color: $spindle;
     font-weight: 400;
     font-size: 16px;
-    line-height: 150%;
+    line-height: 24px;
+    text-align: center;
   }
 }
 
+.trainers__descriptions {
+  padding: 0 0 0 20px;
+}
+
 .trainers__description {
+  position: relative;
+  margin: 0 0 13px;
   font-weight: 400;
   font-size: 14px;
-  line-height: 150%;
+  line-height: 21px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: -9.5%;
+    display: block;
+    width: 6px;
+    height: 6px;
+    background-color: $color-default-white;
+    border-radius: 50%;
+
+    @include vp-767 {
+      top: 7px;
+      left: -10.5%;
+    }
+  }
+}
+
+.trainers__image {
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background-color: $sapphire;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
 }
