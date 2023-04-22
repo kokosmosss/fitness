@@ -99,6 +99,48 @@
   }
 }
 
+.header__list {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+  align-self: end;
+  text-align: end;
+
+  padding: 0 0 80px;
+
+  @include vp-1199 {
+    padding: 0 0 45px;
+  }
+
+  @include vp-767 {
+    padding: 0 0 33px;
+  }
+}
+
+.header__list-link {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+}
+
+.header__content {
+  display: grid;
+  grid-template-columns: 132px 263px;
+  margin: 0 65px 0 0;
+
+  color: $color-default-white;
+
+  @include vp-1199 {
+    grid-template-columns: 113px 210px;
+    margin-right: 31px;
+  }
+
+  @include vp-767 {
+    grid-template-columns: 113px 1fr;
+    margin: 0;
+    width: 100%;
+  }
+}
+
 .header__tel {
   font-family: $alumni;
   font-weight: 600;
@@ -126,48 +168,6 @@
     width: 69px;
     height: 24px;
   }
-}
-
-.header__content {
-  display: grid;
-  grid-template-columns: 132px 263px;
-  margin: 0 65px 0 0;
-
-  color: $color-default-white;
-
-  @include vp-1199 {
-    grid-template-columns: 113px 210px;
-    margin-right: 31px;
-  }
-
-  @include vp-767 {
-    grid-template-columns: 113px 1fr;
-    margin: 0;
-    width: 100%;
-  }
-}
-
-.header__list {
-  grid-column: 1 / 2;
-  grid-row: 2 / 3;
-  align-self: end;
-  text-align: end;
-
-  padding: 0 0 80px;
-
-  @include vp-1199 {
-    padding: 0 0 45px;
-  }
-
-  @include vp-767 {
-    padding: 0 0 33px;
-  }
-}
-
-.header__list-link {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 150%;
 }
 
 .header__btn {

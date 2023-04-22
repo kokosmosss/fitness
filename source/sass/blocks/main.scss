@@ -38,6 +38,30 @@
   }
 
   @include vp-767 {
-    margin-bottom: 70px;
+    margin-bottom: 76px;
+  }
+}
+
+.main__features {
+  margin-bottom: 102px;
+
+  @include vp-1199 {
+    margin-bottom: 82px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 49px;
+  }
+}
+
+.main__promotions {
+  margin-bottom: 116px;
+
+  @include vp-1199 {
+    margin-bottom: 83px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 46px;
   }
 }

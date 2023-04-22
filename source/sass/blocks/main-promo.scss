@@ -1,27 +1,78 @@
 .main-promo {
+  display: flex;
   color: $color-default-white;
   background-color: $torch-red;
 
+  @include vp-767 {
+    flex-direction: column;
+  }
+
   h3 {
+    margin: 0;
+
     font-weight: 700;
     font-size: 28px;
     line-height: 156%;
   }
 
   span {
+    margin: 0 0 20px;
+
     font-weight: 700;
     font-size: 70px;
-    line-height: 156%;
+    line-height: 64px;
+
+    @include vp-767 {
+      margin: 0 0 16px;
+    }
   }
 
   p {
+    margin: 0;
     font-weight: 400;
     font-size: 18px;
     line-height: 140%;
   }
 }
 
+.main-promo__content {
+  display: flex;
+  flex-direction: column;
+
+  width: 50%;
+  padding: 33px 45px 48px;
+
+  @include vp-1199 {
+    width: 100%;
+  }
+
+  @include vp-767 {
+    min-height: 299px;
+    text-align: center;
+  }
+}
+
+.main-promo__image {
+  flex-shrink: 0;
+
+  @include vp-1199 {
+    img {
+      height: 462px;
+      width: 399px;
+    }
+  }
+
+  @include vp-767 {
+    img {
+      height: auto;
+      width: 100%;
+    }
+  }
+}
+
 .main-promo__btn {
+  margin: auto 0 0;
+
   font-family: $roboto;
   font-weight: 700;
   font-size: 14px;

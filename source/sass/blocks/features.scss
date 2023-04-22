@@ -1,28 +1,179 @@
 .features {
+  padding: 97px 0 96px;
+  background-color: $ghost-white;
+
+  @include vp-1199 {
+    padding: 92px 0;
+  }
+
+  @include vp-767 {
+    padding: 59px 0 50px;
+  }
+
   h2 {
+    margin: 0 0 12px;
     font-family: $alumni;
     font-weight: 600;
     font-size: 54px;
+    line-height: 65px;
     letter-spacing: 0.03em;
+    text-align: center;
 
     @include vp-1199 {
       font-size: 42px;
+      line-height: 50px;
     }
 
     @include vp-767 {
+      margin: 0 0 13px;
       font-size: 32px;
     }
   }
 }
 
-.features__value {
+.features__container {
+  width: 100%;
+  max-width: 1366px;
+  min-width: 320px;
+  margin: 0 auto;
+  padding: 0 103px;
+
+  @include vp-1199 {
+    padding: 0 45px;
+  }
+
+  @include vp-767 {
+    padding: 0;
+  }
+}
+
+.features__list {
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr;
+  grid-auto-flow: dense;
+  row-gap: 83px;
+
+  @include vp-1199 {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 0;
+  }
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+    row-gap: 0;
+  }
+}
+
+.features__item:not(.features__item--big) {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 30px;
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+    gap: 0;
+    justify-items: center;
+    text-align: center;
+  }
+}
+
+.features__item:nth-child(2n) {
+  padding: 32px 0 0 81px;
+
+  @include vp-1199 {
+    padding: 22px 0 0 0;
+  }
+
+  @include vp-767 {
+    padding: 15px 36px 15px;
+  }
+}
+
+.features__item:nth-child(2n + 3) {
+  padding: 32px 0 0 65px;
+
+  @include vp-1199 {
+    padding: 23px 0 0 15px;
+  }
+
+  @include vp-767 {
+    padding: 15px 36px 15px;
+  }
+}
+
+.features__item--big {
+  grid-column: 2 / 3;
+  grid-row: span 2;
+  justify-self: center;
+
+  max-width: 240px;
+  padding: 37px 28px 59px;
+  margin: 41px 0 43px;
+
+  background-color: $resolution-blue;
+  color: $color-default-white;
+  text-align: center;
+
+  @include vp-1199 {
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
+
+    max-width: 442px;
+    padding: 14px 113px 39px;
+    margin: 40px 0 12px;
+  }
+
+  @include vp-767 {
+    grid-row: 3 / 4;
+
+    max-width: 100%;
+    padding: 20px 70px 44px;
+    margin: 30px 0 18px;
+  }
+}
+
+.features__description {
+  h3 {
+    margin: 0 0 11px;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 33px;
+
+    @include vp-1199 {
+      margin: 6px 0 0;
+      font-size: 20px;
+    }
+
+    @include vp-767 {
+      line-height: 30px;
+    }
+  }
+
+  p {
+    margin: 0;
+    line-height: 22px;
+  }
+}
+
+.features__description--big {
+  p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.features__value:not(.features__value--big) {
+  display: flex;
+  flex-direction: column;
+
   span {
     font-weight: 700;
     font-size: 71px;
-    line-height: 150%;
+    line-height: 73px;
     color: transparent;
 
-    background-color: linear-gradient(142.51deg, $crimson 0%, $flying-fish 87.33%);
+    background-image: linear-gradient(142.51deg, $crimson 0%, $flying-fish 87.33%);
     background-clip: text;
 
     @include vp-1199 {
@@ -31,56 +182,43 @@
   }
 
   small {
+    margin: -8px 0 0;
+
     font-weight: 400;
     font-size: 14px;
     line-height: 150%;
     color: $persian-blue;
-  }
-}
 
-.features__description {
-  h3 {
-    font-weight: 700;
-    font-size: 22px;
-    line-height: 150%;
-
-    @include vp-1199 {
-      font-size: 20px;
+    @include vp-767 {
+      margin: -11px 0 0;
     }
   }
-
-  p {
-    line-height: 140%;
-  }
-}
-
-.features__item--big {
-  background-color: $resolution-blue;
-  color: $color-default-white;
 }
 
 .features__value--big {
   span {
     font-weight: 700;
     font-size: 74px;
-    line-height: 150%;
+    line-height: 111px;
+    color: $color-default-white;
   }
 
   p {
+    margin: -17px 0 31px;
     font-weight: 700;
     font-size: 26px;
-    line-height: 150%;
+    line-height: 39px;
 
     @include vp-1199 {
+      margin: -21px 0 10px;
       font-size: 22px;
+    }
+
+    @include vp-767 {
+      margin: -27px 0 5px;
     }
   }
 }
 
-.features__description--big {
-  p {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 150%;
-  }
-}
+
+

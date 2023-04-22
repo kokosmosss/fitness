@@ -1,42 +1,117 @@
 .promotions {
   h2 {
+    margin: 0 0 34px;
+
     font-family: $alumni;
     font-weight: 600;
     font-size: 54px;
+    line-height: 65px;
     letter-spacing: 0.03em;
+    text-align: center;
 
     @include vp-1199 {
       font-size: 42px;
     }
 
     @include vp-767 {
+      margin: 0 0 29px;
       font-size: 32px;
     }
   }
 }
 
+.promotions__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+
+  @include vp-1199 {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+.promotions__main-promo {
+  @include vp-1199 {
+    min-height: 462px;
+  }
+}
+
+.promotions__list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  @include vp-1199 {
+    flex-direction: row;
+    gap: 30px;
+  }
+
+  @include vp-767 {
+    flex-direction: column;
+  }
+}
+
 .promotions__item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 211px;
+
   color: $resolution-blue;
+  padding: 22px 35px 35px;
+
+  @include vp-1199 {
+    width: 50%;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    padding: 34px 35px 45px;
+
+    text-align: center;
+  }
 
   h3 {
+    margin: 0;
     font-weight: 700;
     font-size: 26px;
-    line-height: 577%;
+    line-height: 44px;
   }
 
   p {
+    margin: 0;
+
     font-weight: 400;
     font-size: 16px;
-    line-height: 140%;
+    line-height: 22px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    border: 7px solid $smalt;
+    border-image: linear-gradient(to left top, $smalt, $crimson);
+    border-image-slice: 1;
+    pointer-events: none;
   }
 }
 
 .promotions__btn {
+  margin: auto 0 0;
+
   font-family: $roboto;
   font-weight: 700;
   font-size: 12px;
-  line-height: 100%;
+  line-height: 14px;
   letter-spacing: 0.05em;
+  color: $resolution-blue;
   text-transform: uppercase;
   text-decoration: underline;
 }
+

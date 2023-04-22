@@ -1,3 +1,28 @@
+.gym__container {
+  position: relative;
+  display: flex;
+  gap: 80px;
+  margin: 0 auto;
+  padding: 0 103px;
+
+  @include vp-1199 {
+    flex-direction: column;
+    gap: 38px;
+    padding: 0 45px;
+  }
+
+  @include vp-767 {
+    padding: 0;
+    gap: 30px;
+  }
+
+  img {
+    @include vp-1199 {
+      width: 100%;
+    }
+  }
+}
+
 .gym__content {
   max-width: 418px;
   padding: 38px 0 20px 59px;
@@ -57,31 +82,6 @@
       @include vp-1199 {
         display: none;
       }
-    }
-  }
-}
-
-.gym__container {
-  position: relative;
-  display: flex;
-  gap: 80px;
-  margin: 0 auto;
-  padding: 0 103px;
-
-  @include vp-1199 {
-    flex-direction: column;
-    gap: 38px;
-    padding: 0 45px;
-  }
-
-  @include vp-767 {
-    padding: 0;
-    gap: 30px;
-  }
-
-  img {
-    @include vp-1199 {
-      width: 100%;
     }
   }
 }

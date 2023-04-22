@@ -8,6 +8,8 @@
     letter-spacing: 0.03em;
 
     @include vp-1199 {
+      margin: 0 0 34px;
+      text-align: center;
       font-size: 42px;
       line-height: 50px;
     }
