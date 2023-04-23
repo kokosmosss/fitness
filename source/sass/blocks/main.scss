@@ -65,3 +65,58 @@
     margin-bottom: 46px;
   }
 }
+
+.main__reviews {
+  margin-bottom: 120px;
+
+  @include vp-1199 {
+    margin-bottom: 96px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 67px;
+  }
+}
+
+.main__bottom-container {
+  background-image: linear-gradient(90deg, $sapphire 50%, $color-default-white 50%);
+
+  @include vp-1199 {
+    background-image: none;
+  }
+}
+
+
+.main__bottom-wrapper {
+  display: flex;
+  width: 100%;
+  max-width: 1366px;
+  min-width: 320px;
+  margin: 0 auto;
+  padding: 0 103px;
+
+  border-top: 1px solid $light-state-grey;
+
+  @include vp-1199 {
+    padding: 0;
+    flex-direction: column;
+
+    border: none;
+  }
+}
+
+.main__callback {
+  width: 50%;
+
+  @include vp-1199 {
+    width: 100%;
+  }
+}
+
+.main__contacts {
+  width: 50%;
+
+  @include vp-1199 {
+    width: 100%;
+  }
+}

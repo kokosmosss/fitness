@@ -659,15 +659,16 @@ button,
 }
 
 .callback {
+  padding: 56px 15% 63px 0;
   color: #ffffff;
-  background-color: #102654;
 }
 
 .callback h2 {
+  margin: 0 0 13px;
   font-family: "Alumni Sans", "Verdana", sans-serif;
   font-weight: 800;
   font-size: 54px;
-  line-height: 156%;
+  line-height: 84px;
   letter-spacing: 0.03em;
 }
 
@@ -856,21 +857,51 @@ button,
 }
 
 .contacts {
+  width: 50%;
+  padding: 56px 0 66px 10%;
   color: #102654;
 }
 
 .contacts h2 {
+  margin: 0 0 36px;
   font-family: "Alumni Sans", "Verdana", sans-serif;
   font-weight: 600;
   font-size: 54px;
   letter-spacing: 0.03em;
-  margin: 0;
-  margin-bottom: 38px;
+  line-height: 65px;
+}
+
+.contacts__list {
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: -webkit-max-content 1fr;
+  -ms-grid-columns: max-content 1fr;
+  grid-template-columns: -webkit-max-content 1fr;
+  grid-template-columns: max-content 1fr;
+  gap: 23px 120px;
+  max-width: 404px;
+}
+
+.contacts__list::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 90%;
+  background-color: #74819c;
+  top: 6px;
+  left: 57%;
+}
+
+.contacts__item {
+  padding: 0 0 0 3px;
 }
 
 .contacts__item h3 {
   font-weight: 700;
-  margin: 0;
+  font-size: 16px;
+  line-height: 24px;
+  margin: 0 0 4px;
 }
 
 .contacts__item address,
@@ -1011,12 +1042,39 @@ button,
 }
 
 .footer {
+  padding: 44px 0 32px;
   background-color: #030a1a;
+}
+
+.footer__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer__nav-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  gap: 40px;
+  width: 431px;
 }
 
 .footer__nav-link {
   font-weight: 400;
   font-size: 14px;
+}
+
+.footer__social {
+  width: 97px;
+  margin: 0 0 0 auto;
+}
+
+.footer__logo {
+  margin: 0 auto 0 0;
+  padding: 7px 0 0;
 }
 
 .gym__container {
@@ -1293,6 +1351,36 @@ button,
 
 .main__promotions {
   margin-bottom: 116px;
+}
+
+.main__reviews {
+  margin-bottom: 120px;
+}
+
+.main__bottom-container {
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, #102654), color-stop(50%, #ffffff));
+  background-image: -o-linear-gradient(left, #102654 50%, #ffffff 50%);
+  background-image: linear-gradient(90deg, #102654 50%, #ffffff 50%);
+}
+
+.main__bottom-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  max-width: 1366px;
+  min-width: 320px;
+  margin: 0 auto;
+  padding: 0 103px;
+  border-top: 1px solid #74819c;
+}
+
+.main__callback {
+  width: 50%;
+}
+
+.main__contacts {
+  width: 50%;
 }
 
 .promo__container {
@@ -1703,11 +1791,26 @@ button,
   opacity: 0.8;
 }
 
+.form form {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: -webkit-min-content -webkit-min-content;
+  -ms-grid-columns: min-content min-content;
+  grid-template-columns: -webkit-min-content -webkit-min-content;
+  grid-template-columns: min-content min-content;
+  gap: 30px;
+}
+
 .form__area input {
-  font-family: "Roboto Condensed", "Verdana", sans-serif;
-  font-size: 14px;
-  line-height: 100%;
+  width: 190px;
+  padding: 6px 0;
+  border: none;
+  border-bottom: 1px solid #74819c;
   color: #ffffff;
+  font-family: "Roboto Condensed", "Verdana", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
   background-color: transparent;
 }
 
@@ -1738,6 +1841,15 @@ button,
 .form__area input::placeholder {
   font-family: inherit;
   color: #74819c;
+}
+
+.form__btn {
+  grid-column: 1/-1;
+  width: 100%;
+  padding: 17px 100px;
+  border: 3px solid #ffffff;
+  color: #ffffff;
+  background-color: transparent;
 }
 
 [data-tabs=parent] {
@@ -1786,6 +1898,15 @@ button,
   z-index: 1;
   visibility: visible;
   opacity: 1;
+}
+
+.social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .btn {
@@ -1862,6 +1983,18 @@ button,
     padding: 0 45px;
   }
 
+  .callback {
+    padding: 61px 133px 71px;
+    background-color: #102654;
+  }
+
+  .callback h2 {
+    margin: 0 0 32px;
+    font-size: 42px;
+    line-height: 50px;
+    letter-spacing: 0.02em;
+  }
+
   .catalog {
     padding: 42px 0 100px;
   }
@@ -1898,14 +2031,27 @@ button,
     bottom: -14px;
   }
 
+  .contacts {
+    padding: 55px 131px 66px;
+  }
+
   .contacts h2 {
     font-size: 42px;
-    margin-bottom: 32px;
+    margin: 0 0 28px;
+  }
+
+  .contacts__list {
+    gap: 23px 93px;
+    max-width: none;
+  }
+
+  .contacts__list::after {
+    left: 53%;
   }
 
   .contacts__item h3 {
     font-size: 20px;
-    margin-bottom: 6px;
+    margin: 0 0 6px;
   }
 
   .contacts__item address,
@@ -1966,9 +2112,21 @@ button,
     font-size: 22px;
   }
 
+  .footer__container {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .footer__nav-list {
+    width: 391px;
+    gap: 30px;
+  }
+
   .footer__logo {
     width: 82px;
     height: 18px;
+    padding: 0;
   }
 
   .gym__container {
@@ -2106,6 +2264,31 @@ button,
     margin-bottom: 83px;
   }
 
+  .main__reviews {
+    margin-bottom: 96px;
+  }
+
+  .main__bottom-container {
+    background-image: none;
+  }
+
+  .main__bottom-wrapper {
+    padding: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    border: none;
+  }
+
+  .main__callback {
+    width: 100%;
+  }
+
+  .main__contacts {
+    width: 100%;
+  }
+
   .promo__content {
     max-width: none;
     width: 43.1%;
@@ -2206,11 +2389,33 @@ button,
   .trainers__item {
     max-width: 268px;
   }
+
+  .form form {
+    gap: 26px 65px;
+  }
+
+  .form__area input {
+    width: 204px;
+  }
+
+  .form__btn {
+    font-size: 14px;
+    line-height: 16px;
+  }
 }
 
 @media (max-width: 767px) {
   .container {
     padding: 0 15px;
+  }
+
+  .callback {
+    padding: 64px 15px 68px;
+  }
+
+  .callback h2 {
+    font-size: 32px;
+    line-height: 38px;
   }
 
   .catalog {
@@ -2277,9 +2482,33 @@ button,
     width: calc(100% + 7px);
   }
 
+  .contacts {
+    padding: 50px 15px 63px;
+  }
+
   .contacts h2 {
     font-size: 32px;
-    margin-bottom: 36px;
+    margin: 0 0 26px;
+  }
+
+  .contacts__list {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .contacts__list::after {
+    display: none;
+  }
+
+  .contacts__item {
+    padding: 0;
+  }
+
+  .contacts__item:nth-child(2n) {
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1;
   }
 
   .features {
@@ -2338,13 +2567,54 @@ button,
     margin: -27px 0 5px;
   }
 
+  .footer {
+    padding: 51px 0;
+  }
+
+  .footer__container {
+    position: relative;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: start;
+  }
+
+  .footer__nav-list {
+    display: block;
+    width: auto;
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+    -webkit-column-width: 130px;
+    -moz-column-width: 130px;
+    column-width: 130px;
+  }
+
+  .footer__nav-item {
+    margin: 0 0 24px;
+  }
+
+  .footer__nav-item:first-child {
+    margin: 38px 0 24px;
+  }
+
   .footer__nav-link {
     font-size: 16px;
   }
 
+  .footer__social {
+    margin: 0;
+  }
+
   .footer__logo {
+    position: absolute;
+    left: 0;
     width: 68px;
     height: 15px;
+    margin: 0;
   }
 
   .gym__container {
@@ -2485,6 +2755,10 @@ button,
     margin-bottom: 46px;
   }
 
+  .main__reviews {
+    margin-bottom: 67px;
+  }
+
   .promo__container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -2559,6 +2833,20 @@ button,
   .trainers__description::before {
     top: 7px;
     left: -10.5%;
+  }
+
+  .form form {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .form__area input {
+    width: 100%;
+  }
+
+  .social {
+    padding: 13px 0 0;
   }
 }
 
