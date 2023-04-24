@@ -1,6 +1,9 @@
 .trainers {
+  position: relative;
+
   h2 {
     margin: 0 0 48px;
+
     font-family: $alumni;
     font-weight: 600;
     font-size: 54px;
@@ -21,9 +24,21 @@
   }
 }
 
+.trainers__container {
+  width: 100%;
+
+  @include vp-1199 {
+    margin: 0 auto;
+    max-width: 566px;
+  }
+
+  @include vp-767 {
+    max-width: 226px;
+  }
+}
+
 .trainers__list {
   display: flex;
-  gap: 40px;
 }
 
 .trainers__item {
@@ -124,11 +139,6 @@
     height: 6px;
     background-color: $color-default-white;
     border-radius: 50%;
-
-    @include vp-767 {
-      top: 7px;
-      left: -10.5%;
-    }
   }
 }
 
@@ -143,5 +153,63 @@
   img {
     width: 100%;
     height: 100%;
+  }
+}
+
+.trainers__btn {
+  position: absolute;
+  display: block;
+  top: 235px;
+
+  margin: 0;
+  border: none;
+  background-color: transparent;
+
+  @include vp-1199 {
+    top: 210px;
+  }
+
+  @include vp-767 {
+    top: 195px;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    width: 23px;
+    height: 23px;
+    border: 1px solid $dark-grey;
+    border-top: none;
+    border-right: none;
+    transform: rotate(45deg);
+
+    @include vp-767 {
+      width: 14px;
+      height: 14px;
+    }
+  }
+
+  &::after {
+    content: "";
+  }
+
+  &--prev {
+    left: 45px;
+
+    @include vp-767 {
+      left: 11px;
+    }
+  }
+
+  &--next {
+    right: 54px;
+
+    @include vp-767 {
+      right: 11px;
+    }
+
+    &::before {
+      transform: rotate(-135deg);
+    }
   }
 }

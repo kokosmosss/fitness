@@ -18,11 +18,28 @@
   }
 }
 
+.reviews__container {
+  display: flex;
+  max-width: 675px;
+  margin: 0 auto;
+}
+
+.reviews__slider {
+  max-width: 560px;
+
+  @include vp-767 {
+    max-width: 226px;
+  }
+
+}
+
 .reviews__list {
   display: flex;
-  // max-width: 560px;
+  max-width: 560px;
 
-  justify-content: center;
+  @include vp-767 {
+    max-width: 226px;
+  }
 }
 
 .reviews__item {
@@ -89,4 +106,43 @@
   }
 }
 
+.reviews__btn {
+  position: static;
+  display: block;
+  align-self: center;
 
+  margin: 0;
+  border: none;
+  background-color: transparent;
+
+
+  @include vp-767 {
+    top: 195px;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    width: 23px;
+    height: 23px;
+    border: 1px solid $dark-grey;
+    border-top: none;
+    border-right: none;
+    transform: rotate(45deg);
+
+    @include vp-767 {
+      width: 14px;
+      height: 14px;
+    }
+  }
+
+  &::after {
+    content: "";
+  }
+
+  &--next {
+    &::before {
+      transform: rotate(-135deg);
+    }
+  }
+}
