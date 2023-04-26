@@ -2868,6 +2868,10 @@ button,
   gap: 30px;
 }
 
+.form__area {
+  position: relative;
+}
+
 .form__area input {
   width: 190px;
   padding: 6px 0;
@@ -2909,6 +2913,15 @@ button,
 .form__area input::placeholder {
   font-family: inherit;
   color: #74819c;
+}
+
+.form__area .input-message {
+  position: absolute;
+  top: -20px;
+  left: 0;
+  margin: 0;
+  font-size: 12px;
+  color: #d10a42;
 }
 
 .form__btn {
