@@ -80,4 +80,9 @@
   letter-spacing: 0.05em;
   text-transform: uppercase;
   text-decoration: underline;
+
+  &:hover,
+  &:focus {
+    color: $black-russian;
+  }
 }

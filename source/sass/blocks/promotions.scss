@@ -113,5 +113,9 @@
   color: $resolution-blue;
   text-transform: uppercase;
   text-decoration: underline;
-}
 
+  &:hover,
+  &:focus {
+    color: $torch-red;
+  }
+}

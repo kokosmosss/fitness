@@ -18,6 +18,8 @@
     }
 
     @include vp-767 {
+      margin: 0 0 40px;
+
       font-size: 32px;
       line-height: 38px;
     }
@@ -64,14 +66,18 @@
   &:hover,
   &:focus,
   &:focus-within {
-
     .trainers__content-wrapper {
       height: 100%;
       background-color: rgba($sapphire, 0.89);
       padding: 52px 48px;
 
+      @include vp-767 {
+        padding: 42px 28px;
+      }
+
       h3 {
         margin: 0;
+        text-align: center;
       }
     }
 

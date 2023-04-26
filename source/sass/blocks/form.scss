@@ -38,9 +38,9 @@
       width: 100%;
     }
 
-    @include hover-focus {
+    &:hover,
+    &:focus {
       opacity: 0.8;
-      // outline-color: ;
     }
   }
 
@@ -58,6 +58,12 @@
 
   color: $color-default-white;
   background-color: transparent;
+
+  &:hover,
+  &:focus {
+    color: $black-russian;
+    background-color: $color-default-white;
+  }
 
   @include vp-1199 {
     font-size: 14px;

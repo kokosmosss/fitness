@@ -19,10 +19,14 @@ export const tabs = () => {
 
   setActiveContent(getActiveTabName());
 
-  head.addEventListener('click', event => {
+  head.addEventListener('click', (event) => {
     const caption = event.target.closest('.catalog__tab');
-    if (!caption) return
-    if (caption.classList.contains('catalog__tab--active')) return
+    if (!caption) {
+      return;
+    }
+    if (caption.classList.contains('catalog__tab--active')) {
+      return;
+    }
     if (head.querySelector('.catalog__tab--active')) {
       head.querySelector('.catalog__tab--active').classList.remove('catalog__tab--active');
     }
