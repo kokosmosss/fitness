@@ -55,6 +55,8 @@
 .main-promo__image {
   flex-shrink: 0;
 
+  background-color: $chambray;
+
   @include vp-1199 {
     img {
       height: 462px;

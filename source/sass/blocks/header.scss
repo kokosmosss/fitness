@@ -71,6 +71,10 @@
       font-size: 28px;
     }
   }
+
+  img {
+    background-color: $sapphire;
+  }
 }
 
 .header__container {
@@ -150,8 +154,9 @@
 
   @include vp-767 {
     grid-template-columns: 113px 1fr;
-    margin: 0;
+    margin: 0 auto;
     width: 100%;
+    max-width: 350px;
   }
 }
 

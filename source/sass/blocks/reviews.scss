@@ -114,6 +114,13 @@
   border: none;
   background-color: transparent;
 
+  &:hover,
+  &:focus {
+    &::before {
+      border-color: $torch-red;
+      opacity: 0.8;
+    }
+  }
 
   @include vp-767 {
     top: 195px;

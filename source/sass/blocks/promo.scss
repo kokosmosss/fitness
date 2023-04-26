@@ -54,8 +54,6 @@
     font-size: 18px;
     line-height: 27px;
 
-    // transform: translateY(-21px);
-
     @include vp-1199 {
       margin: -5px 0 29px;
 
@@ -142,6 +140,8 @@
   img {
     width: 100%;
     min-height: 466px;
+
+    background-color: $sapphire;
 
     @include vp-1199 {
       min-height: auto;
