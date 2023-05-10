@@ -22,7 +22,7 @@
 
 .promotions__container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 560px 1fr;
   gap: 40px;
 
   @include vp-1199 {
