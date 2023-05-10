@@ -1,8 +1,6 @@
 .trainers {
-  position: relative;
-
   h2 {
-    margin: 0 0 48px;
+    margin: 0 0 48px 68px;
 
     font-family: $alumni;
     font-weight: 600;
@@ -27,20 +25,56 @@
 }
 
 .trainers__container {
-  width: 100%;
+  max-width: 1294px;
+  position: relative;
+  margin: 0 auto;
 
   @include vp-1199 {
-    margin: 0 auto;
+    max-width: 858px;
+  }
+}
+
+.trainers__wrapper {
+  display: flex;
+  padding: 0 10px;
+
+  @include vp-1199 {
+    padding: 0 45px;
+  }
+
+  @include vp-767 {
+    padding: 0 15px;
+  }
+}
+
+.trainers__slider {
+  max-width: 100%;
+
+  @media (max-width: 1279px) {
+    max-width: 866px;
+  }
+
+  @include vp-1199 {
     max-width: 566px;
   }
 
   @include vp-767 {
+    max-width: 700px;
+    height: auto;
+    aspect-ratio: 1 / 1.24;
+  }
+
+  @media (max-width: 350px) {
     max-width: 226px;
   }
 }
 
 .trainers__list {
-  display: flex;
+  gap: 3.35%;
+
+  @include vp-1199 {
+    gap: 0;
+  }
 }
 
 .trainers__item {
@@ -49,7 +83,7 @@
   flex-direction: column;
   overflow: hidden;
   max-width: 260px;
-  height: 294px;
+  max-height: 294px;
   flex-grow: 1;
 
   @include vp-1199 {
@@ -57,8 +91,15 @@
   }
 
   @include vp-767 {
+    max-width: 700px;
+    height: auto;
+    aspect-ratio: 1 / 1.24;
+    max-height: none;
+  }
+
+  @media (max-width: 350px) {
     max-width: 226px;
-    height: 274px;
+    height: 100%;
   }
 
   color: $color-default-white;
@@ -101,6 +142,10 @@
   height: 294px;
   padding: 25px;
   background-color: transparent;
+
+  @include vp-767 {
+    height: 100%;
+  }
 }
 
 .trainers__content {
@@ -165,12 +210,12 @@
 }
 
 .trainers__btn {
-  position: absolute;
-  display: block;
-  top: 235px;
-
+  position: static;
+  align-self: center;
   margin: 0;
-  border: none;
+  border: 0;
+  display: block;
+
   background-color: transparent;
 
   &:hover,
@@ -179,14 +224,6 @@
       border-color: $torch-red;
       opacity: 0.8;
     }
-  }
-
-  @include vp-1199 {
-    top: 210px;
-  }
-
-  @include vp-767 {
-    top: 195px;
   }
 
   &::before {
@@ -210,19 +247,15 @@
   }
 
   &--prev {
-    left: 45px;
+    margin-right: 2%;
 
-    @include vp-767 {
-      left: 11px;
+    @include vp-1199 {
+      margin-right: 0;
     }
   }
 
   &--next {
-    right: 54px;
-
-    @include vp-767 {
-      right: 11px;
-    }
+    transform: translateX(-5px);
 
     &::before {
       transform: rotate(-135deg);

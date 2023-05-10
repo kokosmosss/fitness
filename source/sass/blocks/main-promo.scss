@@ -57,8 +57,11 @@
 
   background-color: $chambray;
 
-  @include vp-1199 {
-    img {
+
+  img {
+    height: 100%;
+
+    @include vp-1199 {
       height: 462px;
       width: 399px;
     }
@@ -73,7 +76,7 @@
 }
 
 .main-promo__btn {
-  margin: auto 0 0;
+  margin: auto auto 0 0;
 
   font-family: $roboto;
   font-weight: 700;
@@ -86,5 +89,9 @@
   &:hover,
   &:focus {
     color: $black-russian;
+  }
+
+  @include vp-767 {
+    margin: auto 0 0;
   }
 }

@@ -17,14 +17,18 @@ export const initTrainersSwiper = () => {
 
       768: {
         slidesPerView: 2,
-        slidesPerGroup: 2,
+        slidesPerGroup: 1,
         spaceBetween: 30,
       },
 
       1200: {
+        slidesPerView: 3,
+        slidesPerGroup: 1,
+      },
+
+      1280: {
         slidesPerView: 4,
-        slidesPerGroup: 4,
-        spaceBetween: 40,
+        slidesPerGroup: 1,
       },
     },
   });

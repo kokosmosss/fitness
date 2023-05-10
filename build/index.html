@@ -79,40 +79,41 @@
               в&nbsp;фитнес
               центре есть несколько оборудованных залов для различных видов групповых занятий.</p>
           </div>
-
-          <picture>
-            <source type="image/webp" media="(max-width: 767px)"
-              srcset="./img/gym-mobile.webp 1x, ./img/gym-mobile@2x.webp 2x">
-            <source type="image/webp" media="(max-width: 1199px)"
-              srcset="./img/gym-tablet.webp 1x, ./img/gym-tablet@2x.webp 2x">
-            <source type="image/webp" srcset="./img/gym.webp 1x, ./img/gym@2x.webp 2x">
-            <source media="(max-width: 767px)" srcset="./img/gym-mobile.jpg 1x, ./img/gym-mobile@2x.jpg 2x">
-            <source media="(max-width: 1199px)" srcset="./img/gym-tablet.jpg 1x, ./img/gym-tablet@2x.jpg 2x">
-            <img src="./img/gym.jpg" srcset="./img/gym@2x.jpg 2x" width="660" height="401"
-              alt="Вид тренажёрного зала с разнообразными тренажёрами." loading="lazy">
-          </picture>
-
-          <div class="gym__video">
+          <div class="gym__bottom-container">
             <picture>
               <source type="image/webp" media="(max-width: 767px)"
-                srcset="./img/video-preview-mobile.webp 1x, ./img/video-preview-mobile@2x.webp 2x">
+                srcset="./img/gym-mobile.webp 1x, ./img/gym-mobile@2x.webp 2x">
               <source type="image/webp" media="(max-width: 1199px)"
-                srcset="./img/video-preview-tablet.webp 1x, ./img/video-preview-tablet@2x.webp 2x">
-              <source type="image/webp" srcset="./img/video-preview.webp 1x, ./img/video-preview@2x.webp 2x">
-              <source media="(max-width: 767px)"
-                srcset="./img/video-preview-mobile.jpg 1x, ./img/video-preview-mobile@2x.jpg 2x">
-              <source media="(max-width: 1199px)"
-                srcset="./img/video-preview-tablet.jpg 1x, ./img/video-preview-tablet@2x.jpg 2x">
-              <img src="./img/video-preview.jpg" srcset="./img/video-preview@2x.jpg 2x" width="364" height="288"
-                alt="Превью видео о Super Gym.">
+                srcset="./img/gym-tablet.webp 1x, ./img/gym-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="./img/gym.webp 1x, ./img/gym@2x.webp 2x">
+              <source media="(max-width: 767px)" srcset="./img/gym-mobile.jpg 1x, ./img/gym-mobile@2x.jpg 2x">
+              <source media="(max-width: 1199px)" srcset="./img/gym-tablet.jpg 1x, ./img/gym-tablet@2x.jpg 2x">
+              <img src="./img/gym.jpg" srcset="./img/gym@2x.jpg 2x" width="660" height="401"
+                alt="Вид тренажёрного зала с разнообразными тренажёрами." loading="lazy">
             </picture>
-            <iframe width="364" height="228" src="https://www.youtube.com/embed/9TZXsZItgdw?autoplay=1&mute=1"
-              frameborder="0" allow="autoplay" allowfullscreen loading="lazy"></iframe>
-            <button class="gym__video-button" aria-label="Запустить видео">
-              <svg width="17" height="17">
-                <use href="./img/sprite.svg#play"></use>
-              </svg>
-            </button>
+
+            <div class="gym__video">
+              <picture>
+                <source type="image/webp" media="(max-width: 767px)"
+                  srcset="./img/video-preview-mobile.webp 1x, ./img/video-preview-mobile@2x.webp 2x">
+                <source type="image/webp" media="(max-width: 1199px)"
+                  srcset="./img/video-preview-tablet.webp 1x, ./img/video-preview-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="./img/video-preview.webp 1x, ./img/video-preview@2x.webp 2x">
+                <source media="(max-width: 767px)"
+                  srcset="./img/video-preview-mobile.jpg 1x, ./img/video-preview-mobile@2x.jpg 2x">
+                <source media="(max-width: 1199px)"
+                  srcset="./img/video-preview-tablet.jpg 1x, ./img/video-preview-tablet@2x.jpg 2x">
+                <img src="./img/video-preview.jpg" srcset="./img/video-preview@2x.jpg 2x" width="364" height="288"
+                  alt="Превью видео о Super Gym.">
+              </picture>
+              <iframe width="364" height="228" src="https://www.youtube.com/embed/9TZXsZItgdw?autoplay=1&mute=1"
+                frameborder="0" allow="autoplay" allowfullscreen loading="lazy"></iframe>
+              <button class="gym__video-button" aria-label="Запустить видео">
+                <svg width="17" height="17">
+                  <use href="./img/sprite.svg#play"></use>
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
       </section>
@@ -132,34 +133,34 @@
                 <li class="catalog__item">
                   <h3>С тренером</h3>
                   <p>12 занятий</p>
-                  <span data-shadow="5000">
-                    5000
+                  <div class="calalog__price">
+                    <span data-shadow="5000">5000</span>
                     <svg aria-hidden="true" focusable="false" width="33" height="42">
                       <use href="./img/sprite.svg#rouble"></use>
                     </svg>
-                  </span>
+                  </div>
                   <a class="catalog__btn btn" href="#">Купить абонемент</a>
                 </li>
                 <li class="catalog__item">
                   <h3>Дневной</h3>
                   <p>с 8:00 до 17:00</p>
-                  <span data-shadow="1700">
-                    1700
-                    <svg aria-hidden="true" focusable="false" width="33" height="42">
-                      <use href="./img/sprite.svg#rouble"></use>
-                    </svg>
-                  </span>
+                <div class="calalog__price">
+                  <span data-shadow="1700">1700</span>
+                  <svg aria-hidden="true" focusable="false" width="33" height="42">
+                    <use href="./img/sprite.svg#rouble"></use>
+                  </svg>
+                </div>
                   <a class="catalog__btn btn" href="#">Купить абонемент</a>
                 </li>
                 <li class="catalog__item">
                   <h3>Полный день</h3>
                   <p>с 8:00 до 22:00</p>
-                  <span data-shadow="2700">
-                    2700
+                  <div class="calalog__price">
+                    <span data-shadow="2700">2700</span>
                     <svg aria-hidden="true" focusable="false" width="33" height="42">
                       <use href="./img/sprite.svg#rouble"></use>
                     </svg>
-                  </span>
+                  </div>
                   <a class="catalog__btn btn" href="#">Купить абонемент</a>
                 </li>
               </ul>
@@ -168,34 +169,34 @@
                 <li class="catalog__item">
                   <h3>С тренером</h3>
                   <p>12 занятий</p>
-                  <span data-shadow="25000">
-                    25000
-                    <svg class="tab__icon" aria-hidden="true" focusable="false" width="33" height="42">
+                  <div class="calalog__price">
+                    <span data-shadow="25000">25000</span>
+                    <svg aria-hidden="true" focusable="false" width="33" height="42">
                       <use href="./img/sprite.svg#rouble"></use>
                     </svg>
-                  </span>
+                  </div>
                   <a class="catalog__btn btn" href="#">Купить абонемент</a>
                 </li>
                 <li class="catalog__item">
                   <h3>Дневной</h3>
                   <p>с 8:00 до 17:00</p>
-                  <span data-shadow="8000">
-                    8000
-                    <svg class="tab__icon" aria-hidden="true" focusable="false" width="33" height="42">
+                  <div class="calalog__price">
+                    <span data-shadow="2700">8000</span>
+                    <svg aria-hidden="true" focusable="false" width="33" height="42">
                       <use href="./img/sprite.svg#rouble"></use>
                     </svg>
-                  </span>
+                  </div>
                   <a class="catalog__btn btn" href="#">Купить абонемент</a>
                 </li>
                 <li class="catalog__item">
                   <h3>Полный день</h3>
                   <p>с 8:00 до 22:00</p>
-                  <span data-shadow="14500">
-                    14500
-                    <svg class="tab__icon" aria-hidden="true" focusable="false" width="33" height="42">
+                  <div class="calalog__price">
+                    <span data-shadow="14500">14500</span>
+                    <svg aria-hidden="true" focusable="false" width="33" height="42">
                       <use href="./img/sprite.svg#rouble"></use>
                     </svg>
-                  </span>
+                  </div>
                   <a class="catalog__btn btn" href="#">Купить абонемент</a>
                 </li>
               </ul>
@@ -281,15 +282,15 @@
         </div>
       </section>
       <section class="main__trainers trainers">
-        <div class="container">
+        <div class=" trainers__container">
           <h2>Тренеры</h2>
-          <div class="trainers__container">
+          <div class="trainers__wrapper">
             <button class="trainers__btn trainers__btn--prev swiper-button-prev" type="button">
               <span class="visually-hidden">Предыдущий слайд.</span>
             </button>
             <div class="trainers__slider swiper">
               <ul class="trainers__list clear-list swiper-wrapper">
-                <li class="trainers__item swiper-slide">
+                <li class="trainers__item swiper-slide" tabindex="0">
                   <div class="trainers__image">
                     <picture>
                       <source type="image/webp"
@@ -311,7 +312,7 @@
                     </div>
                   </div>
                 </li>
-                <li class="trainers__item swiper-slide">
+                <li class="trainers__item swiper-slide" tabindex="0">
                   <div class="trainers__image">
                     <picture>
                       <source type="image/webp"
@@ -333,7 +334,7 @@
                     </div>
                   </div>
                 </li>
-                <li class="trainers__item swiper-slide">
+                <li class="trainers__item swiper-slide" tabindex="0">
                   <div class="trainers__image">
                     <picture>
                       <source type="image/webp"
@@ -355,7 +356,7 @@
                     </div>
                   </div>
                 </li>
-                <li class="trainers__item swiper-slide">
+                <li class="trainers__item swiper-slide" tabindex="0">
                   <div class="trainers__image">
                     <picture>
                       <source type="image/webp"
@@ -377,7 +378,7 @@
                     </div>
                   </div>
                 </li>
-                <li class="trainers__item swiper-slide">
+                <li class="trainers__item swiper-slide" tabindex="0">
                   <div class="trainers__image">
                     <picture>
                       <source type="image/webp"
@@ -398,7 +399,7 @@
                     </div>
                   </div>
                 </li>
-                <li class="trainers__item swiper-slide">
+                <li class="trainers__item swiper-slide" tabindex="0">
                   <div class="trainers__image">
                     <picture>
                       <source type="image/webp"
@@ -419,7 +420,7 @@
                     </div>
                   </div>
                 </li>
-                <li class="trainers__item swiper-slide">
+                <li class="trainers__item swiper-slide" tabindex="0">
                   <div class="trainers__image">
                     <picture>
                       <source type="image/webp"
@@ -440,7 +441,7 @@
                     </div>
                   </div>
                 </li>
-                <li class="trainers__item swiper-slide">
+                <li class="trainers__item swiper-slide" tabindex="0">
                   <div class="trainers__image">
                     <picture>
                       <source type="image/webp"
@@ -550,7 +551,7 @@
                   <source media="(max-width: 1199px)"
                     srcset="./img/promotions-athlete-tablet.jpg 1x, ./img/promotions-athlete-tablet@2x.jpg 2x">
                   <img src="./img/promotions-athlete.jpg" srcset="./img/promotions-athlete@2x.jpg 2x" width="280"
-                    height="462" alt="" loading="lazy">
+                    height="462" alt="Довольная спортсменка." loading="lazy">
                 </picture>
               </div>
             </article>
@@ -589,7 +590,7 @@
                       <source media="(max-width: 767px)"
                         srcset="./img/reviews-user-mobile.png 1x, ./img/reviews-user-mobile@2x.png 2x">
                       <img src="./img/reviews-user.png" srcset="./img/reviews-user@2x.png" width="80" height="80"
-                        alt="Фотография пользователя">
+                        alt="Фотография пользователя.">
                     </picture>
                   </div>
                   <div class="reviews__content">
@@ -610,7 +611,7 @@
                       <source media="(max-width: 767px)"
                         srcset="./img/reviews-user-mobile.png 1x, ./img/reviews-user-mobile@2x.png 2x">
                       <img src="./img/reviews-user.png" srcset="./img/reviews-user@2x.png" width="80" height="80"
-                        alt="Фотография пользователя">
+                        alt="Фотография пользователя.">
                     </picture>
                   </div>
                   <div class="reviews__content">
