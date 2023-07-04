@@ -1639,19 +1639,32 @@ button,
   line-height: 24px;
 }
 
-.catalog__item span {
+.calalog__price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: 0 0 33px;
+}
+
+.calalog__price span {
   position: relative;
-  margin: 0 0 34px;
+  margin: 0 13px 0 0;
   color: #103aae;
   font-weight: 700;
   font-size: 60px;
   line-height: 90px;
 }
 
-.catalog__item span::after {
+.calalog__price span::after {
   position: absolute;
   top: -60%;
-  left: 14%;
+  left: -16%;
   content: attr(data-shadow);
   font-size: 100px;
   line-height: 150px;
@@ -1803,6 +1816,7 @@ button,
 .contacts__item address,
 .contacts__item p,
 .contacts__item a {
+  display: block;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -1998,17 +2012,22 @@ button,
 }
 
 .gym__container {
-  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 80px;
   margin: 0 auto;
-  padding: 0 103px;
+  padding: 0 45px;
+  max-width: 1250px;
 }
 
 .gym__container img {
   background-color: #102654;
+}
+
+.gym__bottom-container {
+  position: relative;
+  max-height: 401px;
 }
 
 .gym__content {
@@ -2040,7 +2059,7 @@ button,
 .gym__video {
   position: absolute;
   top: 72%;
-  left: 39.4%;
+  left: -9.6%;
 }
 
 .gym__video iframe {
@@ -2053,9 +2072,9 @@ button,
 .gym__video-button {
   position: absolute;
   top: 34%;
-  left: 40%;
-  width: 72px;
-  height: 72px;
+  left: 41.3%;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
   border: none;
   background-image: -o-linear-gradient(45.11deg, #003d85 25.38%, #b80027 74.89%);
@@ -2136,10 +2155,6 @@ button,
   text-align: end;
 }
 
-.header img {
-  background-color: #102654;
-}
-
 .header__container {
   max-width: 1160px;
   margin: 0 auto;
@@ -2152,7 +2167,7 @@ button,
   -ms-grid-columns: 1fr auto 1fr;
   grid-template-columns: 1fr auto 1fr;
   width: 100%;
-  padding: 40px 0 25px;
+  padding: 40px 0 7px;
 }
 
 .header__bottom-container {
@@ -2160,6 +2175,10 @@ button,
   display: -ms-flexbox;
   display: flex;
   margin: -37px 0 0;
+}
+
+.header__bottom-container img {
+  background-color: #102654;
 }
 
 .header__list {
@@ -2198,6 +2217,7 @@ button,
   -ms-grid-row-align: start;
   -ms-grid-column-align: end;
   place-self: start end;
+  margin: 0 0 25px;
   font-family: "Alumni Sans", "Verdana", sans-serif;
   font-weight: 600;
   font-size: 26px;
@@ -2291,8 +2311,12 @@ button,
   background-color: #495a7d;
 }
 
+.main-promo__image img {
+  height: 100%;
+}
+
 .main-promo__btn {
-  margin: auto 0 0;
+  margin: auto auto 0 0;
   font-family: "Roboto Condensed", "Verdana", sans-serif;
   font-weight: 700;
   font-size: 14px;
@@ -2456,6 +2480,7 @@ button,
 .promo__image img {
   width: 100%;
   min-height: 466px;
+  height: 100%;
   background-color: #102654;
 }
 
@@ -2484,8 +2509,8 @@ button,
 .promotions__container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr;
-  grid-template-columns: 1fr 1fr;
+  -ms-grid-columns: 560px 1fr;
+  grid-template-columns: 560px 1fr;
   gap: 40px;
 }
 
@@ -2522,7 +2547,7 @@ button,
 }
 
 .promotions__item p {
-  margin: 0;
+  margin: 0 0 10px;
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
@@ -2544,7 +2569,7 @@ button,
 }
 
 .promotions__btn {
-  margin: auto 0 0;
+  margin: auto auto 0 0;
   font-family: "Roboto Condensed", "Verdana", sans-serif;
   font-weight: 700;
   font-size: 12px;
@@ -2579,13 +2604,6 @@ button,
 }
 
 .reviews__slider {
-  max-width: 560px;
-}
-
-.reviews__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   max-width: 560px;
 }
 
@@ -2667,12 +2685,8 @@ button,
   transform: rotate(-135deg);
 }
 
-.trainers {
-  position: relative;
-}
-
 .trainers h2 {
-  margin: 0 0 48px;
+  margin: 0 0 48px 68px;
   font-family: "Alumni Sans", "Verdana", sans-serif;
   font-weight: 600;
   font-size: 54px;
@@ -2681,13 +2695,24 @@ button,
 }
 
 .trainers__container {
-  width: 100%;
+  max-width: 1294px;
+  position: relative;
+  margin: 0 auto;
 }
 
-.trainers__list {
+.trainers__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding: 0 10px;
+}
+
+.trainers__slider {
+  max-width: 100%;
+}
+
+.trainers__list {
+  gap: 3.35%;
 }
 
 .trainers__item {
@@ -2701,7 +2726,7 @@ button,
   flex-direction: column;
   overflow: hidden;
   max-width: 260px;
-  height: 294px;
+  max-height: 294px;
   -webkit-box-flex: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
@@ -2813,11 +2838,13 @@ button,
 }
 
 .trainers__btn {
-  position: absolute;
-  display: block;
-  top: 235px;
+  position: static;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
   margin: 0;
-  border: none;
+  border: 0;
+  display: block;
   background-color: transparent;
 }
 
@@ -2845,11 +2872,13 @@ button,
 }
 
 .trainers__btn--prev {
-  left: 45px;
+  margin-right: 2%;
 }
 
 .trainers__btn--next {
-  right: 54px;
+  -webkit-transform: translateX(-5px);
+  -ms-transform: translateX(-5px);
+  transform: translateX(-5px);
 }
 
 .trainers__btn--next::before {
@@ -2866,6 +2895,10 @@ button,
   grid-template-columns: -webkit-min-content -webkit-min-content;
   grid-template-columns: min-content min-content;
   gap: 30px;
+}
+
+.form__area {
+  position: relative;
 }
 
 .form__area input {
@@ -2909,6 +2942,15 @@ button,
 .form__area input::placeholder {
   font-family: inherit;
   color: #74819c;
+}
+
+.form__area .input-message {
+  position: absolute;
+  top: -20px;
+  left: 0;
+  margin: 0;
+  font-size: 12px;
+  color: #d10a42;
 }
 
 .form__btn {
@@ -2981,6 +3023,12 @@ button,
   }
 */
 
+@media (max-width: 1279px) {
+  .trainers__slider {
+    max-width: 866px;
+  }
+}
+
 @media (max-width: 1199px) {
   .container {
     padding: 0 45px;
@@ -3014,6 +3062,10 @@ button,
   .catalog__list--active {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
+  }
+
+  .catalog__item {
+    padding: 60px 45px;
   }
 
   .catalog__image {
@@ -3142,11 +3194,14 @@ button,
     -ms-flex-direction: column;
     flex-direction: column;
     gap: 38px;
-    padding: 0 45px;
   }
 
   .gym__container img {
     width: 100%;
+  }
+
+  .gym__bottom-container {
+    max-height: none;
   }
 
   .gym__content {
@@ -3170,10 +3225,10 @@ button,
   }
 
   .gym__video {
-    width: 35.2%;
+    width: 39.2%;
     height: 48.7%;
-    top: 85.4%;
-    left: 32.6%;
+    top: 76.4%;
+    left: 30.6%;
   }
 
   .gym__video iframe {
@@ -3183,7 +3238,8 @@ button,
   }
 
   .gym__video-button {
-    top: calc(50% - 81px);
+    top: calc(50% - 28px);
+    left: calc(50% - 28px);
     width: 53px;
     height: 53px;
   }
@@ -3219,6 +3275,10 @@ button,
 
   .header__container {
     padding: 0 45px;
+  }
+
+  .header__nav {
+    padding: 40px 0 0;
   }
 
   .header__bottom-container {
@@ -3402,16 +3462,27 @@ button,
   }
 
   .trainers__container {
-    margin: 0 auto;
+    max-width: 858px;
+  }
+
+  .trainers__wrapper {
+    padding: 0 45px;
+  }
+
+  .trainers__slider {
     max-width: 566px;
+  }
+
+  .trainers__list {
+    gap: 0;
   }
 
   .trainers__item {
     max-width: 268px;
   }
 
-  .trainers__btn {
-    top: 210px;
+  .trainers__btn--prev {
+    margin-right: 0;
   }
 
   .form form {
@@ -3431,7 +3502,7 @@ button,
 @media (max-width: 1199px) and (max-width: 767px) {
   .gym__video-button {
     top: calc(50% - 26px);
-    left: 42%;
+    left: calc(50% - 26px);
   }
 }
 
@@ -3477,21 +3548,24 @@ button,
   }
 
   .catalog__item p {
-    margin: 0 0 48px;
+    margin: 0 0 53px;
   }
 
-  .catalog__item span {
-    margin: 5px 0 26px;
-    font-size: 48px;
-    line-height: 72px;
+  .calalog__price {
+    margin: 0 0 30px;
   }
 
-  .catalog__item span svg {
+  .calalog__price svg {
     width: 24px;
     height: 37px;
   }
 
-  .catalog__item span::after {
+  .calalog__price span {
+    font-size: 48px;
+    line-height: 72px;
+  }
+
+  .calalog__price span::after {
     font-size: 80px;
     line-height: 120px;
   }
@@ -3582,6 +3656,7 @@ button,
     -ms-grid-row-span: 1;
     grid-row: 3/4;
     max-width: 100%;
+    width: 100%;
     padding: 20px 70px 44px;
     margin: 30px 0 18px;
   }
@@ -3668,7 +3743,7 @@ button,
 
   .gym__video {
     position: relative;
-    top: 10px;
+    top: 40px;
     left: 0;
     width: 100%;
   }
@@ -3702,7 +3777,7 @@ button,
   }
 
   .header__nav {
-    padding: 20px 0 25px;
+    padding: 20px 0 7px;
   }
 
   .header__bottom-container img {
@@ -3763,8 +3838,12 @@ button,
     width: 100%;
   }
 
+  .main-promo__btn {
+    margin: auto 0 0;
+  }
+
   .main__gym {
-    margin-bottom: 80px;
+    margin-bottom: 110px;
   }
 
   .main__catalog {
@@ -3776,7 +3855,7 @@ button,
   }
 
   .main__trainers {
-    margin-bottom: 70px;
+    margin-bottom: 64px;
   }
 
   .main__features {
@@ -3784,11 +3863,11 @@ button,
   }
 
   .main__promotions {
-    margin-bottom: 46px;
+    margin-bottom: 51px;
   }
 
   .main__reviews {
-    margin-bottom: 67px;
+    margin-bottom: 70px;
   }
 
   .promo__container {
@@ -3824,26 +3903,27 @@ button,
     text-align: center;
   }
 
+  .promotions__btn {
+    margin: auto 0 0;
+  }
+
   .reviews h2 {
+    margin: 0 0 30px;
     font-size: 32px;
   }
 
   .reviews__slider {
-    max-width: 226px;
-  }
-
-  .reviews__list {
-    max-width: 226px;
+    max-width: none;
   }
 
   .reviews__item {
     display: block;
     width: 226px;
-    padding: 40px 25px;
+    padding: 40px 30px 38px;
   }
 
   .reviews__content h3 {
-    margin: 0 0 18px;
+    margin: 0 0 21px;
   }
 
   .reviews__content p {
@@ -3875,13 +3955,21 @@ button,
     line-height: 38px;
   }
 
-  .trainers__container {
-    max-width: 226px;
+  .trainers__wrapper {
+    padding: 0 15px;
+  }
+
+  .trainers__slider {
+    max-width: 700px;
+    height: auto;
+    aspect-ratio: 1/1.24;
   }
 
   .trainers__item {
-    max-width: 226px;
-    height: 274px;
+    max-width: 700px;
+    height: auto;
+    aspect-ratio: 1/1.24;
+    max-height: none;
   }
 
   .trainers__item:hover .trainers__content-wrapper,
@@ -3890,21 +3978,13 @@ button,
     padding: 42px 28px;
   }
 
-  .trainers__btn {
-    top: 195px;
+  .trainers__content-wrapper {
+    height: 100%;
   }
 
   .trainers__btn::before {
     width: 14px;
     height: 14px;
-  }
-
-  .trainers__btn--prev {
-    left: 11px;
-  }
-
-  .trainers__btn--next {
-    right: 11px;
   }
 
   .form form {
@@ -3919,5 +3999,16 @@ button,
 
   .social {
     padding: 13px 0 0;
+  }
+}
+
+@media (max-width: 350px) {
+  .trainers__slider {
+    max-width: 226px;
+  }
+
+  .trainers__item {
+    max-width: 226px;
+    height: 100%;
   }
 }
